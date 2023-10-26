@@ -24,6 +24,15 @@ db.on(
   'error',
   console.error.bind(console, 'MongoDB connection error:')
 );
+db.once('open', () => {
+  console.log('Connected to MongoDB Atlas');
+});
+
+app.get('/', async (req, res) => {
+  res.send({
+    Message: 'Hello, I am API!',
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
