@@ -2,16 +2,6 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel'); // Adjust the path as needed
 
-const cors = require('cors');
-
-const corsOptions = {
-  origin: 'http://localhost:5173', // Replace with your actual frontend URL
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // Enable passing cookies, sessions, and other credentials
-};
-
-router.use(cors(corsOptions));
-
 // Route to add sleep data to a user
 router.post('/addSleepData', (req, res) => {
   const {
