@@ -3,7 +3,6 @@ const app = express();
 const port = process.env.PORT || 4000;
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const cors = require('cors');
 dotenv.config();
 
 const createUserRoutes = require('./routes/createUser');
@@ -11,7 +10,6 @@ const sleepDataRoutes = require('./routes/sleepData');
 app.use(express.json());
 app.use('/user', createUserRoutes);
 app.use('/sleep', sleepDataRoutes);
-app.use(cors());
 
 const dbUri = process.env.URI;
 
