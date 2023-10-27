@@ -7,9 +7,12 @@ dotenv.config();
 
 const createUserRoutes = require('./routes/createUser');
 const sleepDataRoutes = require('./routes/sleepData');
+const getUserDataRoutes = require('./routes/getUserData');
+
 app.use(express.json());
 app.use('/user', createUserRoutes);
 app.use('/sleep', sleepDataRoutes);
+app.use('/user', getUserDataRoutes);
 
 const dbUri = process.env.URI;
 
