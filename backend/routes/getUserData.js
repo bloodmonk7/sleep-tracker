@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/userModel'); // Adjust the path as needed
+const User = require('../models/userModel');
 
 // Route to get user data by username
 router.get('/getUserData/:username', async (req, res) => {

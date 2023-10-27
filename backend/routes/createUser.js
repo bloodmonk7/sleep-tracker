@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/userModel'); // Adjust the path as needed
+const User = require('../models/userModel');
 const bcrypt = require('bcrypt');
 
-// Route to create a user
 router.post('/createUser', (req, res) => {
   const { username, password } = req.body;
 

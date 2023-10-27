@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/userModel'); // Adjust the path as needed
+const User = require('../models/userModel');
 
-// Route to add sleep data to a user
 router.post('/addSleepData', (req, res) => {
   const {
     userId,
