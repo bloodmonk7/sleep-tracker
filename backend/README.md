@@ -6,6 +6,9 @@ This project was setup using Node.js, Express.js and MongoDB Atlas.
 
 - [Demo](#demo)
 - [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
 - [Building Process](#building-process)
 
 ## Demo
@@ -45,6 +48,46 @@ curl --location 'https://sleep-tracker-api.onrender.com/sleep/addSleepData' \
 
 - After Signup the password is being stored in Encrypted manner using `bcrypt`.
 - API allows updating userdata once at a time without making changes to other existing details.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm (Node Package Manager) installed
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/bloodmonk7/sleep-tracker-backend.git
+   cd sleep-tracker-backend
+
+   ```
+
+2. Install dependencies by running the following command:
+
+   ```bash
+   npm i
+
+   ```
+
+3. Usage
+
+   - Obtain a connection URI for Cluster from MongoDB Atlas and replace value of dbUri in server.js with URL obtained or create a `.env` file in global scope(same level as `node_modules`) and add your connection URL as:
+
+   ```bash
+   URI = Connection URL obtained from MongoDB Atlas
+
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Now you can make same calls given in Demo by replacing base url from `https://sleep-tracker-api.onrender.com` to `http://localhost:10000` in postman.
 
 ## Building Process
 
